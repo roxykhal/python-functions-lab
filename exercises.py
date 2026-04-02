@@ -34,9 +34,10 @@ print('Exercise 2:', simple_interest(1000, 5, 2))
 # Define your function and call it to display the discounted price.
 
 def apply_discount(price, discount_percentage):
-    return (price - discount_percentage)
+    discount = price * discount_percentage / 100
+    return price - discount_percentage
 
-print('Exercise 3:', apply_discount(100, 25))
+print('Exercise 3:', apply_discount(80, 10))
 
 # Exercise 4: Convert Temperature
 #
@@ -73,7 +74,10 @@ print('Exercise 4: Convert 32°F to Celsius:', convert_temperature(32, 'F'))
 # Define the function and then call it below.
 
 def sum_to(n):
-    return(n + 1)
+    total = 0
+    for i in range(1, n + 1):
+        total += i
+    return total
 
 print('Exercise 5:', sum_to(6))
 
